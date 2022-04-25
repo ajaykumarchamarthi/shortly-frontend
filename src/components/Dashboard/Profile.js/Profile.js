@@ -5,7 +5,7 @@ import AddURLModal from "../../Modal/AddURLModal/AddURLModal";
 import classes from "./Profile.module.css";
 import axios from "axios";
 
-function Profile({ loading, setLoading }) {
+function Profile() {
   const [user, setUser] = useState([]);
   const [isOpen, setIsOpen] = useState(false);
 
@@ -23,7 +23,7 @@ function Profile({ loading, setLoading }) {
       setUser(filteredUser);
     };
     loadUsers();
-  }, []);
+  }, [userId]);
 
   const openHandler = (e) => {
     e.preventDefault();

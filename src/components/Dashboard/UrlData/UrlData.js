@@ -46,16 +46,13 @@ function UrlData({ loading, setLoading }) {
       const { data } = response.data;
 
       setUrls(data.urls);
-
-      // const filteredUrls = data.users.filter((user) => user._id === userId);
-      // setUrls(filteredUrls);
     };
     loadUrls();
   }, [click, urls]);
 
   return (
-    <div>
-      <Table bordered responsive className={classes.table}>
+    <div className={classes.table}>
+      <Table bordered responsive="sm">
         <thead>
           <tr>
             <th>Full Url</th>

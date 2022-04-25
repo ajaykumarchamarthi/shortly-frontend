@@ -1,0 +1,29 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  background-color: #1877f2;
+  color: white;
+  flex: 1;
+  height: 60px;
+}
+
+.menu {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0.5em;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 720px) {
+  .logo {
+    font-size: 1.5rem;
+  }
+}
