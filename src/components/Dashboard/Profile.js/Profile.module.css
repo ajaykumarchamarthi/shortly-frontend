@@ -1,0 +1,41 @@
+.profile {
+  width: 320px;
+  border: 1px solid #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  padding: 1em;
+  padding-top: 2.5em;
+}
+
+.userDetails {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1em auto;
+}
+
+.btn {
+  margin: 1em 0;
+}
+
+.btn button {
+  padding: 0.5em 1.5em;
+  border: none;
+  background: #0a95ff;
+  color: white;
+  border-radius: 1em;
+  cursor: pointer;
+}
+
+.btn button:hover {
+  background-color: #0074cc;
+}
+
+@media screen and (max-width: 440px) {
+  .profile {
+    width: 280px;
+    padding: 1em;
+  }
+}
