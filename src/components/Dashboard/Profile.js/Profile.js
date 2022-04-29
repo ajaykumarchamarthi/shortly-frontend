@@ -15,7 +15,7 @@ function Profile() {
   useEffect(() => {
     const loadUsers = async () => {
       const response = await axios.get(
-        "http://localhost:4000/api/v1/users/getAllUsers"
+        "https://shortly-urlshortner-backend.herokuapp.com/api/v1/users/getAllUsers"
       );
       const { data } = response.data;
 
@@ -33,7 +33,7 @@ function Profile() {
   return (
     <div>
       <div className={classes.profile}>
-        <h4>My Profile</h4>
+        <h4 className={classes.title}>My Profile</h4>
         {user.map((user) => {
           return (
             <div className={classes.userDetails} key={user._id}>

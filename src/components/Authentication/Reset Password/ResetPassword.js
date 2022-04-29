@@ -35,7 +35,7 @@ function ResetPassword() {
     const token = params.token;
 
     fetch(
-      `https://loginresetflow-backend.herokuapp.com/api/v1/users/resetPassword/${token}`,
+      `https://shortly-urlshortner-backend.herokuapp.com/api/v1/users/resetPassword/${token}`,
       {
         method: "PATCH",
         body: JSON.stringify({ password, passwordConfirm }),

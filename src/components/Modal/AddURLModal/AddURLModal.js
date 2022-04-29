@@ -32,14 +32,17 @@ const ModalOverlay = (props) => {
     const token = Cookies.get("jwt");
     const userId = localStorage.getItem("userId");
 
-    fetch("http://localhost:4000/api/v1/urlShortner/createUrl", {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${token}`,
-        "content-Type": "application/json",
-      },
-      body: JSON.stringify({ fullUrl, userId }),
-    })
+    fetch(
+      "https://shortly-urlshortner-backend.herokuapp.com/api/v1/urlShortner/createUrl",
+      {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${token}`,
+          "content-Type": "application/json",
+        },
+        body: JSON.stringify({ fullUrl, userId }),
+      }
+    )
       .then((res) => {
         if (res.ok) {
           return res.json();

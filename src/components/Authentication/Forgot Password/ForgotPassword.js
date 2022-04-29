@@ -23,7 +23,7 @@ function ForgotPassword() {
     const email = data.email;
 
     fetch(
-      "https://loginresetflow-backend.herokuapp.com/api/v1/users/forgotPassword",
+      "https://shortly-urlshortner-backend.herokuapp.com/api/v1/users/forgotPassword",
       {
         method: "POST",
         body: JSON.stringify({ email }),

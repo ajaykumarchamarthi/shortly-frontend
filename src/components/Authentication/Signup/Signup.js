@@ -34,19 +34,22 @@ function Signup() {
     const password = data.password;
     const confirmPassword = data.confirmPassword;
 
-    fetch("http://localhost:4000/api/v1/users/signup", {
-      method: "POST",
-      headers: {
-        "content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        firstName,
-        lastName,
-        email,
-        password,
-        confirmPassword,
-      }),
-    })
+    fetch(
+      "https://shortly-urlshortner-backend.herokuapp.com/api/v1/users/signup",
+      {
+        method: "POST",
+        headers: {
+          "content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          firstName,
+          lastName,
+          email,
+          password,
+          confirmPassword,
+        }),
+      }
+    )
       .then((res) => {
         if (res.ok) {
           return res.json();

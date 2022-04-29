@@ -40,7 +40,7 @@ function UrlData({ loading, setLoading }) {
   useEffect(() => {
     const loadUrls = async () => {
       const response = await axios.get(
-        "http://localhost:4000/api/v1/urlShortner/getAllUrls"
+        "https://shortly-urlshortner-backend.herokuapp.com/api/v1/urlShortner/getAllUrls"
       );
 
       const { data } = response.data;

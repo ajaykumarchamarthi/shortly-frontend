@@ -17,6 +17,10 @@
   margin: 1em 0;
 }
 
+.title {
+  text-align: center;
+}
+
 .btn button {
   padding: 0.5em 1.5em;
   border: none;

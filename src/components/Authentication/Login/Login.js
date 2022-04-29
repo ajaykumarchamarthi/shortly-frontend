@@ -29,13 +29,16 @@ function Login() {
     const email = data.email;
     const password = data.password;
 
-    fetch("http://localhost:4000/api/v1/users/login", {
-      method: "POST",
-      body: JSON.stringify({ email, password }),
-      headers: {
-        "content-Type": "application/json",
-      },
-    })
+    fetch(
+      "https://shortly-urlshortner-backend.herokuapp.com/api/v1/users/login",
+      {
+        method: "POST",
+        body: JSON.stringify({ email, password }),
+        headers: {
+          "content-Type": "application/json",
+        },
+      }
+    )
       .then((res) => {
         if (res.ok) {
           return res.json();
@@ -60,8 +63,11 @@ function Login() {
 
   return (
     <div className={classes.container}>
+      <p className={classes.credentials}>
+        User Credentials - ajayaj0302@gmail.com & ajay0302
+      </p>
       <div className={classes.title}>
-        <h3>Login</h3>
+        <h3 className={classes.title}>Login</h3>
       </div>
       <form className={classes.form} onSubmit={handleSubmit(submitHandler)}>
         <div>

@@ -13,6 +13,12 @@
   letter-spacing: 0.1em;
 }
 
+.credentials {
+  text-align: center;
+  color: #333;
+  font-weight: 1.1em;
+}
+
 .form {
   display: flex;
   flex-direction: column;
